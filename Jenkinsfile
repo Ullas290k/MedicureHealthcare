@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout Git Repository') {
             steps {
                 echo 'Checking out the Git repository...'
-                git branch: 'master', url: 'https://github.com/Ravi4090/Medicure-healthcare.git'
+                git branch: 'master', url: 'https://github.com/Ullas290k/MedicureHealthcare.git'
             }
         }
         
@@ -22,7 +22,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building the Docker image...'
-                sh 'docker build -t ravishankar119/healthcare:1.0 .'
+                sh 'docker build -t ullas290k/healthcare:1.0 .'
             }
         }
         
@@ -38,7 +38,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 echo 'Pushing the Docker image to Docker Hub...'
-                sh 'docker push ravishankar119/healthcare:1.0'
+                sh 'docker push ullas290k/healthcare:1.0'
             }
         }
         
